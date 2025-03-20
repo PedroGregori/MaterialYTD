@@ -11,7 +11,7 @@
     "url": "git+https://github.com/PedroGregori/MaterialYTD.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Felipe Guimarães",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PedroGregori/MaterialYTD/issues"
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/PedroGregori/MaterialYTD#readme",
   "type": "module",
   "dependencies": {
+    "@distube/ytdl-core": "^4.16.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2"
   }

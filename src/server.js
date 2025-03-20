@@ -7,8 +7,11 @@ const { PORT } = process.env
 
 const app = express()
 
-app.use(videoDownloadRoute)
+app.use(express.static("./public"))
+app.use(express.json())
 
+app.use(videoDownloadRoute)
+    
 app.listen(PORT, () => {
     console.log("Server Rodando")
 })
