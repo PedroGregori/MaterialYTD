@@ -12,20 +12,33 @@
     <title>Youtube Video Download</title>
 </head>
 <body>
-    <div>
-        <input
-            id="input-url"
-            type="url"
-            name="ulrYt"
-            placeholder="https://youtu.be/example1234abcd">
-        <button id="btn-url">Download</button>
-    </div>
-
-    <div class="box-quality-options">
-        <select class="form-select" aria-label="Default select example">
-          </select>
-    </div>
-
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="">testee</a>
+            </div>
+            <div class="navbar-languages">
+                <a href="">testee</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="download-page">
+            <div class="download-page-content">
+                <h1>Download Youtube videos</h1>
+                <div class="download-options">
+                    <input
+                    class="download-input"
+                    id="input-url"
+                    type="url"
+                    name="ulrYt"
+                    placeholder="https://youtu.be/example1234abcd">
+                    <button class="download-buttons" class="btn-url">Download</button>
+                    <button class="download-buttons" class="download-search"">Search</button>
+                </div>
+            </div>
+        </section>
+    </main>
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

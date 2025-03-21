@@ -1,3 +1,77 @@
+:root {
+    /* Ajeite as cores pedro */
+    --color-base: #3498db;
+
+    --color-light-1: #5faee3;
+    --color-light-2: #8ac4ea;
+    --color-light-3: #b5d9f1;
+    --color-light-4: #e0eef8;
+
+    --color-dark-1: #2c81ba;
+    --color-dark-2: #246a99;
+    --color-dark-3: #1b4f73;
+    --color-dark-4: #35383b;
+
+    --color-gray-1: #6c8a9e;
+    --color-gray-2: #9aa8b2;
+    --color-gray-3: #c8d1d6;
+    --color-gray-4: #e6eaed;
+
+    --font-small: 14px;
+    --font-medium: 20px;
+    --font-large: 38px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .box-quality-options {
 	width: 250px;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 1%;
+	background-color: black;
+	gap: 1em;
+	height: 15vh;
+}
+
+.navbar-logo {
+
+}
+
+.download-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 85vh;
+}
+
+.download-page-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    gap: 1em;
+}
+
+.download-options {
+
+}
+
+.download-input {
+	height: 10vh;
+	width: 40vw;
+}
+
+.download-search {
+
+}
+
+.download-buttons {
+	height: 10vh;
 }
