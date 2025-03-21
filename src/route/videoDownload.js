@@ -1,10 +1,12 @@
 import { Router } from "express"
 import {
     sendMainPage,
-    videoInfo } from "../controller/videoDownload.js"
+    justFormatVideos } from "../controller/videoDownload.js"
 
 export const videoDownloadRoute = Router()
 
-videoDownloadRoute.route("/api")
+videoDownloadRoute.route("/")
     .get(sendMainPage)
-    .post(videoInfo)
+
+videoDownloadRoute.route("/url/formats/req")
+    .post(justFormatVideos)

@@ -1,6 +1,5 @@
 import ytdl from "@distube/ytdl-core"
 import { createWriteStream } from "node:fs"
-import { formatWithOptions } from "node:util"
 
 export const sendMainPage = (req, res) => {
     const config = {
@@ -10,16 +9,25 @@ export const sendMainPage = (req, res) => {
     res.sendFile("index.html", config)
 }
 
-export const videoInfo = (req, res) => {
+export const justFormatVideos = async (req, res) => {
     const { url_yt } = req.body
 
-    ytdl.getInfo(url_yt).then(info => {
-        const { videoDetails, formats, selectedFormat, bestFormat } = info
+    try {
+        const {
+            formats,
+            videoDetails
+         } = await ytdl.getInfo(url_yt)
 
-        const formatsJustAudio = formats
-            .filter(format => format.hasAudio === true && format.hasVideo === false)
+         const videoFormats = ytdl.filterFormats(formats, "video")
 
-        res.status(200).json(formatsJustAudio)
-    });
-    
+        res.status(200).json({ videoFormats, videoDetails })
+    } catch (error) {
+        res.status(400).json({ message: error.message })
+    }
+}
+
+export const downloadVideo = (req, res) => {
+    const { urlVideo } = req.body
+
+    const video = ytdl(urlVideo)
 }
