@@ -22,6 +22,20 @@ $ cat env.example >> .env
 $ vim .env
 ~~~
 
+#### Windows:
+
+~~~ cmd
+REM Vá para o diretorio raiz do MaterialYTD
+> CD {caminho-para-MaterialYtd}/MaterialYTD~
+
+REM Escreva o conteudo do arquivo env.example
+REM no arquivo .env 
+> COPY env.example .env
+
+REM Edite o arquivo .env com as configurações de sua preferencia (notepad não vem por padrão no CMD)
+> notepad .env
+
+~~~
 ### Instalando as dependencias:
 Nosso programa usa bibliotecas de terceiros,
 sendo necessario instala-los para o programa
