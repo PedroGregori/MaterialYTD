@@ -8,6 +8,7 @@
         rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Youtube Video Download</title>
 </head>
@@ -33,22 +34,24 @@
                     <p>Save any YouTube public video in just a few clicks! Enter the video URL, choose the quality and click to download!</p>
                 </div>
               <div class="download-page-search-options">
-                    <i class="bi bi-link-45deg"></i>
-                    <input
-                    class="download-page-input-url"
-                    id="input-url"
-                    type="url"
-                    name="ulrYt"
-                    placeholder="https://youtu.be/example1234abcd">
+                    <div class="download-page-input-container">
+                        <i class="bi bi-link"></i>
+                        <input
+                        class="download-page-input"
+                        id="input-url"
+                        type="url"
+                        name="ulrYt"
+                        placeholder="https://youtu.be/example1234abcd">
+                    </div>
                     <button class="search-button" id="btn-search">Search</button>
                 </div>
                 <div class="download-page-result" id="download-result" style="display: none;">
                     <div class="download-page-result-video-thumbnail">
-                        <img src="./images/thumbnail.jpg" alt="thumbnail">
+                        <img id="video-thumbnail" alt="thumbnail">
                     </div>
                     <div class="download-page-result-video-info">
-                        <h2>Video title</h2>
-                        <p>Video description</p>
+                        <h3 id="video-title">teste titulo</h3>
+                        <p id="video-description">teste descriçao</p>
                     </div>
                 </div>
             </div>
