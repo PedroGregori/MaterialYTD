@@ -28,18 +28,28 @@
     <main>
         <section class="download-page">
             <div class="download-page-content">
-                <h1>YouTube videos downloader</h1>
-                <p>Save any YouTube public video in just a few clicks! Enter the video URL, choose the quality and click to download!</p>
-                <div class="download-options">
+                <div class="download-page-introduce">
+                    <h1>YouTube videos downloader</h1>
+                    <p>Save any YouTube public video in just a few clicks! Enter the video URL, choose the quality and click to download!</p>
+                </div>
+              <div class="download-page-search-options">
                     <i class="bi bi-link-45deg"></i>
                     <input
-                    class="download-input"
+                    class="download-page-input-url"
                     id="input-url"
                     type="url"
                     name="ulrYt"
                     placeholder="https://youtu.be/example1234abcd">
-                    <button class="download-button" class="btn-url">Download</button>
-                    <button class="search-button">Search</button>
+                    <button class="search-button" id="btn-search">Search</button>
+                </div>
+                <div class="download-page-result" id="download-result" style="display: none;">
+                    <div class="download-page-result-video-thumbnail">
+                        <img src="./images/thumbnail.jpg" alt="thumbnail">
+                    </div>
+                    <div class="download-page-result-video-info">
+                        <h2>Video title</h2>
+                        <p>Video description</p>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,5 +1,4 @@
 :root {
-    /* Ajeite as cores pedro */
     --color-base: #3498db;
 
     --color-light-1: #8642bd;
@@ -20,98 +19,110 @@
     --font-small: 14px;
     --font-medium: 20px;
     --font-large: 38px;
+
+    --spacing-small: 1em;
+    --spacing-medium: 2em;
+    --spacing-large: 3em;
 }
 
 body {
     height: 100vh;
-    background: radial-gradient(500px at center,rgb(20, 0, 34),rgb(15, 15, 15));    
     margin: 0;
     padding: 0;
-}
-
-.box-quality-options {
-	width: 250px;
+    background: radial-gradient(500px at center, rgb(20, 0, 34), rgb(15, 15, 15));
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	padding: 0 1%;
-	background-color: rgb(15, 15, 15);
-	gap: 1em;
-	height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--spacing-small);
+    height: 15vh;
+    gap: var(--spacing-small);
 }
 
-hr {
-    border-color: rgba(202, 196, 208, 0.356);
-}
-
-.navbar-logo {
-    padding-top: 0px;    
-    img {
-        width: 213px; height: 66px;
-    }
+.navbar-logo img {
+    height: 4em;
 }
 
 .download-page {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
 .download-page-content {
     display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-    gap: 1em;
-    color: white;
-    p {
-        padding-bottom: 5vh;
-        color: #666e75;
-    };
-    h1 {
-        padding-top: 10vh;
-    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-small);
+    text-align: center;
 }
 
-.download-options {
-
+.download-page-introduce {
+    display: grid;
+    align-items: center;
+    gap: var(--spacing-small);
 }
 
-.download-input {
-	height: 6.5vh;
-	width: 40vw;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-style: solid; border-width: 1px;
-    border-color: rgba(50, 47, 53, 1);
+.download-page-introduce h1 {
+    font-size: var(--font-large);
+}
+
+.download-page-introduce p {
+    color: var(--color-gray-2);
+    font-size: var(--font-medium);
+}
+
+.download-page-input-url {
+    min-height: 6.5vh;
+    min-width: 40vw;
     padding-left: 3%;
+    border: 1px solid var(--color-dark-4);
+    border-radius: 20px 0 0 20px;
     background-color: rgba(13, 13, 13, 0.2);
     color: white;
+    font-size: var(--font-small);
 }
 
 .search-button {
-    background-color: #8642bd;
-    border-style: hidden;
+    min-height: 6.5vh;
+    min-width: 10vh;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--color-light-1);
     color: white;
-    height: 6.5vh;
-    width: 10vh;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    font-size: var(--font-small);
+}
+
+.search-button:hover {
+    background-color: var(--color-dark-1);
 }
 
 .download-button {
-    background-color: rgba(227, 193, 255, 0.20);
-    border-color: #79747E;
-    border-style: solid ;
-    border-width: 1px;
-    color: white;
-	height: 6.5vh;
+    height: 6.5vh;
     width: 11vh;
+    border: 1px solid var(--color-gray-2);
+    border-radius: 20px;
+    background-color: rgba(227, 193, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    font-size: var(--font-small);
 }
 
-.bi bi-link-45deg {
-    color: #8642bd;
+.download-button:hover {
+    background-color: rgba(227, 193, 255, 0.4);
+}
+
+.bi.bi-link-45deg {
+    color: var(--color-light-1);
+}
+
+hr {
+    border-color: rgba(202, 196, 208, 0.356);
 }
